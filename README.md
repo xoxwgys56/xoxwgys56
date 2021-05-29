@@ -4,7 +4,7 @@ You can call me Dan or Daewon.
 I am python developer work in Seoul.
 
 <h3 align="center">Python Developer 🏃🏻</h3>
-<p align="center">Developer of [upennsolution](https://www.upennsolution.com/)</p>
+<p align="center">Developer of <a href="https://www.upennsolution.com/">upennsolution</a></p>
 
 <h3 align="center">Peronal Web Pages</h3>
 <p align="center">
@@ -92,7 +92,25 @@ I am python developer work in Seoul.
   <img height=20 src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/unrealengine.svg" alt="unrealengine" />
 </p>
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=xoxwgys56)](https://github.com/anuraghazra/github-readme-stats)
+<br />
+<!-- use https://github.com/anuraghazra/github-readme-stats -->
+<div align="center">
+  <!--  language statistics  -->
+  
+<!--   [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=xoxwgys56&layout=compact&theme=dracula)](https://github.com/anuraghazra/github-readme-stats) -->
+  
+</div>
+<div align="center">
+  <!--  github stats   -->
+  
+  [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=xoxwgys56&show_icons=true&theme=dracula)](https://github.com/anuraghazra/github-readme-stats)
+  
+</div>
+
+
+<!-- [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=xoxwgys56&repo=xoxwgys56)](https://github.com/anuraghazra/github-readme-stats) -->
+
+
 
 <!--
 **xoxwgys56/xoxwgys56** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
