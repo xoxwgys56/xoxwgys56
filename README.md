@@ -1,4 +1,7 @@
-## Hello I am Dan Kim
+# Hello I am Dan Kim
+
+You can call me Dan or Daewon.  
+I am python developer work in Seoul.
 
 <h3 align="center">Python Developer 🏃🏻</h3>
 <p align="center">Developer of [upennsolution](https://www.upennsolution.com/)</p>
