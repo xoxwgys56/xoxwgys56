@@ -1,8 +1,7 @@
 # Hello I am Dan Kim
 
-You can call me Dan or Daewon. I am python developer work in Seoul.
-
 <p><strong>Python Developer 🏃🏻</strong> Developer of <a href="https://www.upennsolution.com/">upennsolution</a></p>
+You can call me Dan or Daewon. I am python developer work in Seoul.
 
 <h3 align="center">Peronal Web Pages</h3>
 <p align="center">
