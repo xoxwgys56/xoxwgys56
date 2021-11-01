@@ -1,0 +1,51 @@
+[submodule "practices/javascript-practice"]
+	path = practices/javascript-practice
+	url = https://github.com/xoxwgys56/javascript-practice.git
+[submodule "practices/yorkie-practice"]
+	path = practices/yorkie-practice
+	url = https://github.com/xoxwgys56/yorkie-practice.git
+[submodule "practices/typescript-practice"]
+	path = practices/typescript-practice
+	url = https://github.com/xoxwgys56/typescript-practice.git
+[submodule "practices/rxjs-practice"]
+	path = practices/rxjs-practice
+	url = https://github.com/xoxwgys56/rxjs-practice.git
+[submodule "practices/go_practice"]
+	path = practices/go_practice
+	url = https://github.com/xoxwgys56/go_practice.git
+[submodule "detectron2-practice"]
+	path = practices/detectron2-practice
+	url = https://github.com/xoxwgys56/detectron2-practice.git
+[submodule "django-practice"]
+	path = practices/django-practice
+	url = https://github.com/xoxwgys56/django-practice.git
+[submodule "fastapi-practice"]
+	path = practices/fastapi-practice
+	url = https://github.com/xoxwgys56/fastapi-practice.git
+[submodule "gitflow-practice"]
+	path = practices/gitflow-practice
+	url = https://github.com/xoxwgys56/gitflow-practice.git
+[submodule "chatterbot-practice"]
+	path = practices/chatterbot-practice
+	url = https://github.com/xoxwgys56/chatterbot-practice.git
+[submodule "svelte-practice"]
+	path = practices/svelte-practice
+	url = https://github.com/xoxwgys56/svelte-practice.git
+[submodule "practices/chatterbot-practice"]
+	path = practices/chatterbot-practice
+	url = https://github.com/xoxwgys56/chatterbot-practice.git
+[submodule "practices/svelte-practice"]
+	path = practices/svelte-practice
+	url = https://github.com/xoxwgys56/svelte-practice.git
+[submodule "practices/gitflow-practice"]
+	path = practices/gitflow-practice
+	url = https://github.com/xoxwgys56/gitflow-practice.git
+[submodule "practices/fastapi-practice"]
+	path = practices/fastapi-practice
+	url = https://github.com/xoxwgys56/fastapi-practice.git
+[submodule "practices/django-practice"]
+	path = practices/django-practice
+	url = https://github.com/xoxwgys56/django-practice.git
+[submodule "practices/detectron2-practice"]
+	path = practices/detectron2-practice
+	url = https://github.com/xoxwgys56/detectron2-practice.git
