@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Document</title>
 </head>
 <body>
@@ -13,6 +12,7 @@
         References
             - [youtube iframe player api doc](https://developers.google.com/youtube/iframe_api_reference?hl=ko)
             - [codepen video fill](https://codepen.io/dudleystorey/pen/QvvEYQ)
+            - [youtube player property doc](https://developers.google.com/youtube/player_parameters.html?playerVersion=HTML5)
      -->
     <header>
         <style>
@@ -30,13 +30,15 @@
                 position: relative;
                 max-width: 1200px;
             }
-            header div { width: 100%; }
+            header div { 
+                width: 100%;
+            }
             svg { 
                 width: 100%;
                 position:absolute;
                 top: 0;
                 left: 0; 
-                height: 100%;
+                height: 120%;
             }
             svg text {
                 font-family: Biko, sans-serif;
@@ -51,50 +53,57 @@
                 -webkit-mask: url(#mask);
                 mask: url(#mask);
             }
+            .youtube-wrapper {
+                padding: 5vh auto;
+            }
         </style>
-        <div id="player"></div>
+        <div class="youtube-wrapper">
+            <div id="player"></div>
+        </div>
          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMid slice">
         <defs>
-        <mask id="mask" x="0" y="0" width="100%" height="100%" >
-          <rect x="0" y="0" width="100%" height="100%" />
-        <text x="50"  y="50">OCEANS 123456789</text>
-          </mask>
-      </defs>
-     <rect x="0" y="0" width="100%" height="100%" />
-      </svg>
+            <mask id="mask" x="0" y="0" width="100%" height="100%" >
+                <rect x="0" y="0" width="100%" height="100%" />
+                <text x="97.25"  y="50" >OCEANS 123456789</text>
+            </mask>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" />
+    </svg>
     </header>
     <script>
         // Change `const` or `let` to `var`. if script does not work.
         const tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
-        const videoId = '5qap5aO4i9A';
-        const videoText = '매우 싸발적이군';
+        const videoId = 'wnGh-V_0iWk';
+        const videoText = 'OCEAN';
 
         const firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
         const textElem = document.getElementsByTagName('text')[0];
         textElem.textContent = videoText;
-        textElem.style.fontSize = `${256 / videoText.length}px`;
+        textElem.style.fontSize = `${128 / videoText.length}px`;
         
-        let player;
         function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
+            new YT.Player('player', {
                 height: '100%',
                 width: '100%',
                 videoId: videoId,
                 playerVars: {
                     controls: 0,
                     loop: 1,
-                    iv_load_policy: 3,
-                    modestbranding: 1,
+                    // iv_load_policy: 3,
+                    // modestbranding: 1,
                 },
                 events: {
                     'onReady': event => {
+                        event.target.mute();
                         event.target.playVideo();
                     },
                 },
             });
         }
+        const player = document.querySelector("#player");
+        player.style.height = "38vmin";
     </script>
 </body>
 </html>
