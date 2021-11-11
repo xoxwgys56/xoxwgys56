@@ -1,0 +1,103 @@
+<div>
+    <!-- This html create for tistory -->
+    <style>
+        @font-face {
+            font-family: Biko;
+            src:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff");
+        }
+        .youtube-container {
+
+        }
+        .youtube-block {
+            position: absolute;
+            width: 800px;
+            height: 400px;
+        }
+        .youtube-container .cover {
+            z-index: 2;
+            /* background-color: black; */
+        }
+        .youtube-container .youtube-video {
+            z-index: 1;
+        }
+
+        svg { 
+            width: 100%;
+            position:absolute;
+            top: 0;
+            left: 0; /* needed for FF, Safari, Edge */
+            height: 100%;
+        }
+        svg text {
+            font-family: Biko, sans-serif;
+            font-weight: 700;
+            /* text-transform: uppercase; */
+            font-size: 38px;
+        }
+        svg rect {
+            fill: white;
+        }
+        svg > rect {
+            -webkit-mask: url(#mask);
+            mask: url(#mask);
+        }
+    </style>
+    <div class="youtube-container">
+        <div class="youtube-block cover">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <mask id="mask" x="0" y="0" width="100%" height="100%" >
+                        <rect x="0" y="0" width="100%" height="100%" />
+                        <text x="72"  y="50" id="video-text">Ocean</text>
+                    </mask>
+                </defs>
+                <rect x="0" y="0" width="100%" height="100%" />
+            </svg>
+        </div>
+        <!-- <iframe class="youtube-block youtube-video" src="https://www.youtube.com/embed/5qap5aO4i9A" id="youtube-video" title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            <div class="youtube-block youtube-video" id="player"></div>
+    </div>
+    <script>
+        // Change `const` or `let` to `var`. if script does not work.
+        /**
+         * References
+         *  - [youtube iframe player api doc](https://developers.google.com/youtube/iframe_api_reference?hl=ko)
+         *  - [codepen video fill](https://codepen.io/dudleystorey/pen/QvvEYQ)
+        */
+
+        const tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        let player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                // height: '360',
+                // width: '640',
+                videoId: '5qap5aO4i9A',
+                events: {
+                    'onReady': onPlayerReady,
+                    // 'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+        let done = false;
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING && !done) {
+                setTimeout(stopVideo, 6000);
+                done = true;
+            }
+        }
+        function stopVideo() {
+            player.stopVideo();
+        }
+    </script>
+</div>
