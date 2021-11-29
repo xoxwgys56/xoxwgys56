@@ -49,3 +49,6 @@
 [submodule "practices/detectron2-practice"]
 	path = practices/detectron2-practice
 	url = https://github.com/xoxwgys56/detectron2-practice.git
+[submodule "book-note"]
+	path = book-note
+	url = https://github.com/xoxwgys56/book-note.git
