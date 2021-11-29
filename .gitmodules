@@ -52,3 +52,9 @@
 [submodule "book-note"]
 	path = book-note
 	url = https://github.com/xoxwgys56/book-note.git
+[submodule "practices/react"]
+	path = practices/react
+	url = https://github.com/xoxwgys56/react-practice.git
+[submodule "practices/git"]
+	path = practices/git
+	url = https://github.com/xoxwgys56/git-practice.git
