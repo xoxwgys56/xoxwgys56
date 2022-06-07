@@ -2,4 +2,4 @@
 
 ## TODO
 
-sorting builtin and (called) magic-function
+- [x] sorting builtin and (called) magic-function
