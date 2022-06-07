@@ -1,6 +1,6 @@
 # ES
 
-> in this document we suppose ES running on localhost.
+> in this document we suppose ES running on `localhost` and use `9200` port.
 
 ## GET
 
@@ -8,16 +8,24 @@
 
 get all indices
 
-```
+```curl
 GET localhost:9200/_cat/indices
 ```
 
 ### GET API
 
-```
-GET my-index-000001/_doc/0
+Get first document
+
+read more about [docs-get](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-get.html)
+
+```curl
+GET localhost:9200/index-name/_doc/0
 ```
 
-#### Read more
+Get document count.
 
-- [docs-get](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-get.html)
+read more about [search-count](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-count.html)
+
+```curl
+GET localhost:9200/index-name/_count
+```
