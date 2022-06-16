@@ -51,3 +51,22 @@ db.example.find({
 ```
 
 read more about [and](https://www.mongodb.com/docs/manual/reference/operator/query/and/)
+
+## 📕 Model
+
+### save model instance
+
+`.save` and `.findByIdAndUpdate` are same.
+
+> The main difference is that when you use `findById` and `save`, you first get the object from MongoDB and then update whatever you want to and then save. This is ok when you don't need to worry about parallelism or multiple queries to the same object.
+
+```typescript
+// use .save
+const docInstance = await Document.findById(id);
+docInstance.field = newValue;
+docInstance.save();
+// use .findByIdAndUpdate
+Document.findByIdAndUpdate({ _id: id }, { field: newValue });
+```
+
+read more about [using-save-vs-findbyidandupdate-for-removing-item-from-array](https://stackoverflow.com/questions/54308553/using-save-vs-findbyidandupdate-for-removing-item-from-array)
