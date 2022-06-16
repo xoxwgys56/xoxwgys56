@@ -35,3 +35,11 @@ class RecipeResolver {
 ```
 
 read more about [ts resolver](https://typegraphql.com/docs/resolvers.html)
+
+## Argument
+
+### nullable
+
+Arguments in GraphQL are nullable (i.e. optional) by **default**.
+
+read more about [graphql-optional-query-arguments](https://stackoverflow.com/questions/64436979/graphql-optional-query-arguments)
