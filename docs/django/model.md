@@ -13,3 +13,13 @@ use `.values()` method after _queryset_
 ```
 
 Read more about [select_some_fields](https://books.agiliq.com/projects/django-orm-cookbook/en/latest/select_some_fields.html)
+
+## remove object from many-to-many field
+
+use `.remove` method.
+
+```python
+my_mood.interests.remove(my_interest)
+```
+
+Read more about [django-removing-object-from-manytomany-relationship](https://stackoverflow.com/questions/6333068/django-removing-object-from-manytomany-relationship)

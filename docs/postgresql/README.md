@@ -9,9 +9,23 @@ create table <table-name> (
 );
 ```
 
-### Read more about table
+Read more about [postgresql-create-table](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-create-table/)
 
-- [postgresql-create-table](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-create-table/)
+### foreign key array
+
+```sql
+CREATE TABLE PKTABLEFORARRAY (
+    ptest1 float8 PRIMARY KEY,
+    ptest2 text
+);
+CREATE TABLE FKTABLEFORARRAY (
+    ftest1 int[],
+    FOREIGN KEY (EACH ELEMENT OF ftest1) REFERENCES PKTABLEFORARRAY,
+    ftest2 int
+);
+```
+
+read more about [postgresql-array-of-elements-that-each-are-a-foreign-key](https://stackoverflow.com/questions/41054507/postgresql-array-of-elements-that-each-are-a-foreign-key)
 
 ## conf file
 
