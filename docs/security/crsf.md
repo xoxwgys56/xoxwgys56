@@ -1,8 +1,25 @@
 # CRSF
 
-> Cross-Site Request Forgery 
+> Cross-Site Request Forgery
 >
 > 사이트 간 요청 위조
+
+## TL;DR
+
+### About CSRF Token
+
+- who create?
+  - client
+- who validate?
+  - server
+
+> the only thing that counts is where it goes _to_.
+
+more read about this.  
+
+- [how-to-pass-csrf-token-from-server-to-client](https://stackoverflow.com/questions/50732159/how-to-pass-csrf-token-from-server-to-client)
+
+---
 
 ## Prerequisites
 
@@ -86,3 +103,4 @@ session.setAttribute("CSRF_TOKEN", UUID.randomUUID().toString());
 
 - [CSRF-공격이란-그리고-CSRF-방어-방법](https://itstory.tk/entry/CSRF-%EA%B3%B5%EA%B2%A9%EC%9D%B4%EB%9E%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-CSRF-%EB%B0%A9%EC%96%B4-%EB%B0%A9%EB%B2%95)
 - [나무위키 CSRF](https://namu.wiki/w/CSRF)
+- [how-to-pass-csrf-token-from-server-to-client](https://stackoverflow.com/questions/50732159/how-to-pass-csrf-token-from-server-to-client)
