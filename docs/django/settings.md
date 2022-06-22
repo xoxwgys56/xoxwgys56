@@ -47,3 +47,5 @@ and call it when launch django-server like below:
 ```shell
 python3 manage.py runserver --settings=settings_dev.py
 ```
+
+read more about [what-is-the-variable-that-indicates-the-environment-in-django](https://stackoverflow.com/questions/1233463/what-is-the-variable-that-indicates-the-environment-in-django)
