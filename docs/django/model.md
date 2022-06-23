@@ -1,5 +1,9 @@
 # Model
 
+## populate data for testing
+
+see gist [populate.sh](https://gist.github.com/xoxwgys56/fd9fc9f5ac6d2e216956ec1a768433c8)
+
 ## get specific field
 
 use `.values()` method after _queryset_
