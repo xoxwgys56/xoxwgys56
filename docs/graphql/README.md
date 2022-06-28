@@ -42,4 +42,15 @@ read more about [ts resolver](https://typegraphql.com/docs/resolvers.html)
 
 Arguments in GraphQL are nullable (i.e. optional) by **default**.
 
+or in *resolver*, you can add parameter like below:
+
+```ts
+@Query((returns) => [Recipe])
+async fetchRequest(
+  @Arg('param', { nullable: true }) param: string
+) {
+  // some of codes ...
+}
+```
+
 read more about [graphql-optional-query-arguments](https://stackoverflow.com/questions/64436979/graphql-optional-query-arguments)

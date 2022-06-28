@@ -21,3 +21,15 @@ console.log(adventurer.someNonExistentMethod?.());
 ```
 
 read more about [Optional_chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+
+## Get attribute list
+
+use `Object.keys()`.
+
+```js
+var keys = Object.keys(myObject);
+```
+
+### Read more about get attribute list
+
+- [how-to-list-the-properties-of-a-javascript-object](https://stackoverflow.com/questions/208016/how-to-list-the-properties-of-a-javascript-object)

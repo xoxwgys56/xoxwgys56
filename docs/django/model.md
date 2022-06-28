@@ -27,3 +27,26 @@ my_mood.interests.remove(my_interest)
 ```
 
 Read more about [django-removing-object-from-manytomany-relationship](https://stackoverflow.com/questions/6333068/django-removing-object-from-manytomany-relationship)
+
+
+## Reverse referencing
+
+or you can call it. as "reverse-lookup".  
+
+use `<attribute>_set` property.
+
+```python
+class Event(models.Model):
+    name = models.CharField(max_length=255)
+    venue = models.ForeignKey(Venue)
+
+class Venue(models.Model):
+    name = models.CharField(max_length=255)
+
+
+events = venue.event_set
+```
+
+### Read more about reverse-ref
+
+- [django-reverse-lookup-of-foreign-keys](https://stackoverflow.com/questions/15306897/django-reverse-lookup-of-foreign-keys)
