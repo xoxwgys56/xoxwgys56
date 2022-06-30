@@ -49,3 +49,36 @@ python3 manage.py runserver --settings=settings_dev.py
 ```
 
 read more about [what-is-the-variable-that-indicates-the-environment-in-django](https://stackoverflow.com/questions/1233463/what-is-the-variable-that-indicates-the-environment-in-django)
+
+## Get variable
+
+you can access through `settings`.
+
+```python
+from django.conf import settings
+
+# "FOO" must defined inside of `settings.py`
+foo = settings.FOO
+```
+
+but it could be raise an error. in this case, there is 2 solutions.  
+
+1. use `getattr`
+
+```python
+foo = getattr(settings, 'FOO', 'default value of foo')
+```
+
+2. catch with `AttributeError`
+
+```python
+try:
+  foo = settings.FOO
+except AttributeError as err:
+  print(err)
+```
+
+### Read more about get setting var
+
+- [how-to-define-a-default-value-for-a-custom-django-setting](https://stackoverflow.com/questions/5601590/how-to-define-a-default-value-for-a-custom-django-setting)
+- [how-do-i-reference-a-django-settings-variable-in-my-models-py](https://stackoverflow.com/questions/7867797/how-do-i-reference-a-django-settings-variable-in-my-models-py)
