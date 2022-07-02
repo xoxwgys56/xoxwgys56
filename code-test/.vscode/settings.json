@@ -1,0 +1,6 @@
+{
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "python.defaultInterpreterPath": "./venv/bin/python3",
+    "python.formatting.blackPath": "./venv/bin/black"
+}
