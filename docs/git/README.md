@@ -35,6 +35,7 @@ git log | grep git-subtree-dir | tr -d ' ' | cut -d ":" -f2 | sort | uniq
   - [when-to-use-git-subtree](https://stackoverflow.com/questions/32407634/when-to-use-git-subtree/33579069#33579069)
   - [git-subtree-only-one-file-or-directory](https://stackoverflow.com/questions/22334382/git-subtree-only-one-file-or-directory)
   - [how-can-i-list-the-git-subtrees-on-the-root](https://stackoverflow.com/a/18339297/11082758)
+  - [git-subtree-pull-merge-conflict](https://stackoverflow.com/questions/25294227/git-subtree-pull-merge-conflict)
 - medium [mastering-git-subtrees](https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec)
 - gist.SKempin [Git Subtree Basics](https://gist.github.com/SKempin/b7857a6ff6bddb05717cc17a44091202)
 - atlassian [git-subtree](https://www.atlassian.com/git/tutorials/git-subtree)
