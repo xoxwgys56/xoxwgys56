@@ -99,3 +99,33 @@ I think specifying `through_fields` is more better to read.
 - [django-extend-manytomanyfield](https://lee-seul.github.io/django/2019/02/21/django-extend-manytomanyfield.html)
 - IBM [relationships-bridge-tables](https://www.ibm.com/docs/en/cognos-analytics/11.1.0?topic=relationships-bridge-tables)
   - A logical data model may contain one or more many-to-many relationships. Physical data modelling techniques transform a many-to-many many-relationships into one-to many-relationships by adding *additional tables*. These are referred to as bridge tables.
+
+## Update
+
+```python
+"""
+return updated model instance count
+below case, must return 1
+"""
+response = MyModel.objects.filter(pk=obj.pk).update(val=F('val') + 1)
+```
+
+it is like below SQL query:
+
+```sql
+UPDATE `model` SET `field1` = 2 WHERE `model`.`id` = 223
+```
+
+but what if `obj.pk` does not exist? is there raised `DoesNotExist` error from `.update` method or not?
+
+```python
+response = MyModel.objects.filter(pk=not_exist_pk).update(field=new_value)
+print(response) # 0
+```
+
+it does not raise `DoesNotExist` error. so if you want check, you should validate response from `.update`.
+
+### Read more about django-update
+
+- django doc [refreshing-objects-from-database](https://docs.djangoproject.com/en/4.0/ref/models/instances/#refreshing-objects-from-database)
+- stackoverflow [django-calling-update-on-a-single-model-instance-retrieved-by-get](https://stackoverflow.com/a/30353795/11082758)
