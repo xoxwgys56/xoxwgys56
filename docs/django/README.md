@@ -22,3 +22,8 @@ async def index(request):
 
 - testdriven [django-async-views](https://testdriven.io/blog/django-async-views/)
 - wersdoerfer [django-31-async](https://wersdoerfer.de/blogs/ephes_blog/django-31-async/)
+
+
+## progress bar
+
+https://buildwithdjango.com/blog/post/celery-progress-bars/

@@ -4,6 +4,19 @@
 
 [python doc urllib.parse](https://docs.python.org/3/library/urllib.parse.html)
 
+### urljoin
+
+```python
+urljoin('http://localhost:8000', 'path')
+urljoin('http://localhost:8000/', 'path')
+urljoin('http://localhost:8000/', '/path')
+# http://localhost:8000/path
+```
+
+#### Read more about `urljoin`
+
+- python3 doc [urljoin](https://docs.python.org/ko/3/library/urllib.parse.html#urllib.parse.urljoin)
+
 ### url parameter parsing
 
 [dololak.tistory.com](https://dololak.tistory.com/254)
