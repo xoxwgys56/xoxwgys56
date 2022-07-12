@@ -82,3 +82,20 @@ except AttributeError as err:
 
 - [how-to-define-a-default-value-for-a-custom-django-setting](https://stackoverflow.com/questions/5601590/how-to-define-a-default-value-for-a-custom-django-setting)
 - [how-do-i-reference-a-django-settings-variable-in-my-models-py](https://stackoverflow.com/questions/7867797/how-do-i-reference-a-django-settings-variable-in-my-models-py)
+
+## In server (mod_wsgi)
+
+replace set env-var like below:
+
+```python
+import os
+
+
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
+os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
+```
+
+### Read more about mod_wsgi
+
+- django doc [settings](https://docs.djangoproject.com/en/4.0/topics/settings/#on-the-server-mod-wsgi)
+- stackoverflow [improperlyconfigured-you-must-either-define-the-environment-variable-django-set](https://stackoverflow.com/questions/26082128/improperlyconfigured-you-must-either-define-the-environment-variable-django-set)

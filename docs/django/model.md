@@ -1,5 +1,49 @@
 # Model
 
+## to dictionary
+
+### 1. `instance.__dict__`
+
+missing `many_to_many`, `foreign_key`
+
+```python
+data: dict = instance.__dict__
+
+# return example
+{
+    '_foreign_key_cache': <OtherModel: OtherModel object>,
+    '_state': <django.db.models.base.ModelState at 0x7ff0993f6908>,
+    'auto_now_add': datetime.datetime(2018, 12, 20, 21, 34, 29, 494827, tzinfo=<UTC>),
+    'foreign_key_id': 2,
+    'id': 1,
+    'normal_value': 1,
+    'readonly_value': 2
+}
+```
+
+### 2. `model_to_dict`
+
+include `many_to_many` but missing uneditable field.
+
+```python
+from django.forms.models import model_to_dict
+
+
+data: dict = model_to_dict(instance)
+
+# return example
+{
+    'foreign_key': 2,
+    'id': 1,
+    'many_to_many': [<OtherModel: OtherModel object>],
+    'normal_value': 1
+}
+```
+
+### Read more about django-dict
+
+- stackoverflow [convert-django-model-object-to-dict-with-all-of-the-fields-intact](https://stackoverflow.com/a/29088221/11082758)
+
 ## populate data for testing
 
 see gist [populate.sh](https://gist.github.com/xoxwgys56/fd9fc9f5ac6d2e216956ec1a768433c8)
