@@ -173,3 +173,26 @@ it does not raise `DoesNotExist` error. so if you want check, you should validat
 
 - django doc [refreshing-objects-from-database](https://docs.djangoproject.com/en/4.0/ref/models/instances/#refreshing-objects-from-database)
 - stackoverflow [django-calling-update-on-a-single-model-instance-retrieved-by-get](https://stackoverflow.com/a/30353795/11082758)
+
+## override `.save`
+
+```python
+def save(self, *args, **kwargs):
+    # some pre_save logic
+    # 
+    # self.field = value
+    super().save(*args, **kwargs)
+```
+
+### Read more about override-save
+
+- stackoverflow [django-override-save-for-model](https://stackoverflow.com/a/4269828/11082758)
+- django doc [customizing-model-loading](https://docs.djangoproject.com/en/4.0/ref/models/instances/#customizing-model-loading)
+- about `pre_save`
+  - stackoverflow [populating-django-field-with-pre-save](https://stackoverflow.com/questions/6461989/populating-django-field-with-pre-save)
+
+## Type hint
+
+### Read more about type-hint
+
+- willmcgugan [adding-type-hints-to-the-django-orm](https://www.willmcgugan.com/blog/tech/post/adding-type-hints-to-the-django-orm/)
