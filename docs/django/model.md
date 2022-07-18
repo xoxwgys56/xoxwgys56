@@ -196,3 +196,50 @@ def save(self, *args, **kwargs):
 ### Read more about type-hint
 
 - willmcgugan [adding-type-hints-to-the-django-orm](https://www.willmcgugan.com/blog/tech/post/adding-type-hints-to-the-django-orm/)
+
+
+## Get SQL query
+
+access to `.query` property.
+
+```python
+queryset = MyModel.objects.all()
+print(queryset.query)
+# SELECT "myapp_mymodel"."id", ... FROM "myapp_mymodel"
+```
+
+### Red more about sql-query
+
+- stackoverflow [getting-the-sql-from-a-django-queryset](https://stackoverflow.com/questions/3748295/getting-the-sql-from-a-django-queryset)
+- SQL formatter
+  - dpriver [sqlformat](https://www.dpriver.com/pp/sqlformat.htm) 👍🏻
+  - red-gate [sql-formatter](https://www.red-gate.com/website/sql-formatter)
+
+## Get label from integer-choice
+
+```python
+from django.db import models
+
+
+class Person(models.Model):
+    SHIRT_SIZES = (
+        ('S', 'Small'),
+        ('M', 'Medium'),
+        ('L', 'Large'),
+    )
+    name = models.CharField(max_length=60)
+    shirt_size = models.CharField(max_length=2, choices=SHIRT_SIZES)
+
+
+p = Person(name="Fred Flintstone", shirt_size="L")
+p.save()
+p.shirt_size
+# 'L'
+p.get_shirt_size_display()
+# 'Large'
+```
+
+### Read more about get-label-from-integer-choice
+
+- django doc [extra-instance-methods](https://docs.djangoproject.com/en/4.0/ref/models/instances/#extra-instance-methods)
+- stackoverflow [how-to-get-the-label-of-a-choice-in-a-django-forms-choicefield](https://stackoverflow.com/a/762830/11082758)
