@@ -1,5 +1,16 @@
 # `kubectl`
 
+<center>
+    <img src="https://geekflare.com/wp-content/uploads/2021/03/kubectl.jpg" alt="kubernetes mark">
+    <p>kubectl</p>
+</center>
+
+## Shortcuts
+
+- [cheetsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
+---
+
 ## Install
 
 - [install on macOS](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
