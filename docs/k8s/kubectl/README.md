@@ -44,3 +44,11 @@ kubectl get po pod1 --watch
 ```shell
 watch kubectl get po pod1
 ```
+
+### Get resource from namespace
+
+all resource from namespace
+
+```sh
+kubectl get all -n <namespace>
+```
